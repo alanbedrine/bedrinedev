@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact | OPAB Airsoft{% endblock %}
+
+{% block body %}
+<div class="content">
+    <h1 class="text-center text-white mt-5 mb-5">CONTACT</h1>
+    <h3 class="text-center text-white mt-5 mb-5">Tél : </h3>
+    <div class="contact mt-5">
+        <h3></h3>
+        {{ form_start(form) }}
+            {{ form_label(form.name) }}
+            {{ form_widget(form.name) }}
+            <div class="error-contact">{{ form_errors(form.name) }}</div>
+            {{ form_label(form.lastname) }}
+            {{ form_widget(form.lastname) }}
+            <div class="error-contact">{{ form_errors(form.lastname) }}</div>
+            {{ form_label(form.email) }}
+            {{ form_widget(form.email) }}
+            <div class="error-contact">{{ form_errors(form.email) }}</div>
+            {{ form_label(form.object) }}
+            {{ form_widget(form.object) }}
+            <div class="error-contact">{{ form_errors(form.object) }}</div>
+            {{ form_label(form.message) }}
+            {{ form_widget(form.message) }}
+            <div class="error-contact">{{ form_errors(form.message) }}</div>
+            <button class="btn-contact" type="submit">Envoyer</button>
+        {{ form_end(form) }}
+        {% for message in app.flashes('notice') %}
+            <h2 class="alert alert-warning text-center mt-4 mb-4" role="alert">
+                {{ message }}
+            </h2>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

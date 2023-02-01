@@ -252,6 +252,101 @@ header {
     }
 }
 
+/* CONTACT */
+
+.contact {
+    width: 50%;
+    min-width: 390px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    form {
+        background-color: $color-1;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    form label {
+        display: block;
+        font-size: 20px;
+        width: fit-content;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+    form input, form select {
+        display: block;
+        border: none;
+        border-radius: 100px;
+        width: 70%;
+        min-width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: $color-1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form textarea {
+        display: block;
+        border: none;
+        border-radius: 20px;
+        width: 70%;
+        height: 150px;
+        min-width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: $color-1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.btn-contact {
+    display: block;
+    width: fit-content;
+    border: none;
+    background-color: white;
+    color: $color-1;
+    border: 1px solid $color-1;
+    border-radius: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+        transition: 3s;
+        background-color: $color-1;
+        color: white;
+        border: 1px solid white;
+    }
+}
+
+.error-contact {
+    ul {
+        width: fit-content;
+        padding: 0px;
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        li {
+            color: #C0392B;
+        }
+    }
+}
+
 /* LOGIN */
 
 #login {
