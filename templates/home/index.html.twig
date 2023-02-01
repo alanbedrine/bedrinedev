@@ -1,5 +1,72 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-
+<section class="home">
+    <h1 class="">Développeur WEB et Informaticien</h1>
+    <h2 class="h4">Développeur web et informaticien, je réponds à toutes vos demandes sur Lyon et sa région</h2> 
+    <div class="btn-grid">
+        <a class="btn-home" href="#info">Vous avez un projet</a>
+        <a class="btn-home" href="#contact">Besoin d'aide</a>
+    </div>
+</section>
+<section class="service">
+    <h2 class="text-center">Services</h2>
+    <div class="grid-service">
+        <div class="service-detail">
+            <img src="{{ asset('build/images/website.png') }}" alt="Site vitrine">
+            <h3 class="h5">Création et refonte de site vitrine</h3>
+        </div>
+        <div class="service-detail">
+            <img src="{{ asset('build/images/ecommerce.png') }}" alt="Boutique ecommerce">
+            <h3 class="h5">Création boutique en ligne</h3>
+        </div>
+        <div class="service-detail">
+            <img src="{{ asset('build/images/seo.png') }}" alt="Gestion SEO et SEA">
+            <h3 class="h5">Gestion SEO et SEA</h3>
+        </div>
+        <div class="service-detail">
+            <img src="{{ asset('build/images/webdesign.png') }}" alt="Web design">
+            <h3 class="h5">Web Design</h3>
+        </div>
+        <div class="service-detail">
+            <img src="{{ asset('build/images/maintenance.png') }}" alt="Maintenance informatique">
+            <h3 class="h5">Maintenance et dépannage informatique</h3>
+        </div>
+    </div>
+    <a class="btn-home" href="#contact">Faire un devis</a>
+</section>
+<section class="entreprise reveal" id="info">
+    <div class="entreprisecontent" align="center">
+        <div>
+            <h2 class="color_text gras reveal-1" align="left">Bedrinedev</h2>
+            <p class="text2 gras" align="left">Bedrinedev est une <sprong>Agence Digitale</sprong> située à <sprong>Irigny</sprong>, créée par <sprong>Alan BEDRINE</sprong> en août 2020, qui a pour ambition de rendre accessible à tous la <sprong>création d'un site internet</sprong>. 
+            Bedrinedev vous accompagne dans la <sprong>création de site internet</sprong> : étude, design UX/UI, conception, développement et référencement.
+            Notre Agence Web est capable de répondre à tous vos besoins et d’élaborer une véritable <sprong>stratégie marketing et digitale</sprong>. Notre agence spécialisée a réalisé plus de 5 sites internet depuis sa création.
+            Nous proposons également des prestations de création e-commerce, et autres...
+            Experts dans divers domaines de la communication, le développement et les fonctionnalités d’un site, le webdesign, notre métier est de vous apporter des réponses sur mesure, adaptées à votre activité.</p>
+        </div>
+        <div>
+            <img src="IMG/entreprise.jpg" class="entreprise" alt="Entreprise Bedrinedev" align="center" width="460" height="511">
+        </div>
+    </div>
+</section>
+<section class="equipe" id="equipe">
+    <div class="equipecontent" align="center">
+        <h2 class="text7 gras textportfolio1 reveal-1" align="center">Equipe</h2>
+        <div class="grid-equipe">
+            <div class="card reveal" align="center">
+                <div class="informations">
+                    <img src="IMG/photo-alan.webp" class="informations reveal-1" alt="Photo d'Alan Bedrine" align="center" width="125" height="125">
+                    <h2 class="informations">Alan BEDRINE</h2>
+                    <h4 class="informations">PDG & Développeur WEB</h4>
+                </div>
+                <div class="icon reveal-4">
+                    <a href="https://www.linkedin.com/in/alanbedrine/" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://github.com/alanbedrine" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="mailto:alan.bedrine@bedrinedev.com?subject=Contact - Bedrinedev" target="_blank"><i class="fas fa-envelope fa-2x"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 {% endblock %}

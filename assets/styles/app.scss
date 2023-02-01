@@ -22,7 +22,7 @@ body {
 }
 
 .error {
-    margin-top: 200px;
+    margin: 200px;
     margin-bottom: 200px;
 }
 
@@ -48,7 +48,7 @@ header {
     width: 90%;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 40px;
+    margin: 40px;
     margin-bottom: 100px;
     grid-template-columns: 1fr 1fr;
     @media (max-width: 800px) {
@@ -76,18 +76,33 @@ header {
     ul {
         width: fit-content;
         margin-left: auto;
-        li {
-            display: inline-block;
-            width: fit-content;
-            margin-left: 20px;
-            margin-right: 20px;
-            a {
-                font-weight: bold;
-                &:hover {
-                    color: $color-1;
-                    transition: 2s;
-                }
-            }
+    }
+}
+
+.btn-header {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 20px;
+    margin-right: 20px;
+    a {
+        font-weight: bold;
+        &:hover {
+            color: $color-1;
+            transition: 2s;
+        }
+    }
+}
+
+.btn-header-right {
+    display: inline-block;
+    width: fit-content;
+    margin-left: 20px;
+    margin-right: 0px;
+    a {
+        font-weight: bold;
+        &:hover {
+            color: $color-1;
+            transition: 2s;
         }
     }
 }
@@ -102,9 +117,9 @@ header {
     border-radius: 100px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 10px;
+    padding: 10px;
     padding-bottom: 10px;
-    margin-top: 90px;
+    margin: 90px;
     margin-bottom: 130px;
     margin-left: auto;
     margin-right: auto;
@@ -116,8 +131,24 @@ header {
 }
 
 .home {
+    background-color: $color-1;
     width: fit-content;
-    margin-top: 210px;
+    margin: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 30px;
+    border-radius: 25px;
+    h1, h2 {
+        text-align: center;
+    }
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.info {
+    width: fit-content;
+    margin: 210px;
     margin-left: auto;
     margin-right: auto;
     h1, h2 {
@@ -135,7 +166,7 @@ header {
     margin-left: auto;
     margin-right: auto;
     grid-template-columns: 1fr 1fr;
-    column-gap: 60px;
+    column-gap: 40px;
 }
 
 .btn-home {
@@ -144,16 +175,58 @@ header {
     color: white;
     border: 2px solid white;
     border-radius: 100px;
-    padding-left: 40px;
-    padding-right: 40px;
     padding-top: 10px;
     padding-bottom: 10px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-left: auto;
     margin-right: auto;
     &:hover {
         transition: 3s;
         background-color: white;
-        color: black;
+        color: $color-1;
+    }
+}
+
+.service {
+    a {
+        margin-top: 90px;
+    }
+}
+
+.grid-service {
+    width: fit-content;
+    display: grid;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-detail {
+    background-color: $color-1;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 25px;
+    h3 {
+        width: 150px;
+        text-align: center;
+    }
+    img {
+        display: block;
+        width: 80px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
     }
 }
 
@@ -162,7 +235,7 @@ header {
 #login {
     width: 50%;
     min-width: 390px;
-    margin-top: 120px;
+    margin: 120px;
     margin-bottom: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -179,7 +252,7 @@ header {
         margin-left: auto;
         margin-right: auto;
         margin-bottom: 5px;
-        margin-top: 25px;
+        margin: 25px;
     }
     form input, form select {
         display: block;
@@ -189,7 +262,7 @@ header {
         min-width: 320px;
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 5px;
+        padding: 5px;
         padding-bottom: 5px;
         color: $color-1;
         margin-left: auto;
@@ -197,7 +270,7 @@ header {
         margin-bottom: 25px;
     }
     form div {
-        margin-top: 20px;
+        margin: 20px;
         margin-bottom: 20px;
     }
 }
@@ -211,9 +284,9 @@ header {
     border-radius: 100px;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 10px;
+    padding: 10px;
     padding-bottom: 10px;
-    margin-top: 40px;
+    margin: 40px;
     margin-bottom: 40px;
     margin-left: auto;
     margin-right: auto;
@@ -242,7 +315,7 @@ header {
 #news-form {
     width: 50%;
     min-width: 390px;
-    margin-top: 120px;
+    margin: 120px;
     margin-bottom: 150px;
     margin-left: auto;
     margin-right: auto;
@@ -268,14 +341,14 @@ header {
         min-width: 320px;
         padding-left: 15px;
         padding-right: 15px;
-        padding-top: 5px;
+        padding: 5px;
         padding-bottom: 5px;
         color: $color-1;
         margin-left: auto;
         margin-right: auto;
     }
     form div {
-        margin-top: 20px;
+        margin: 20px;
         margin-bottom: 20px;
     }
 }
@@ -283,7 +356,7 @@ header {
 /* FOOTER */
 
 footer {
-    margin-top: 30px;
+    margin: 30px;
     p {
         text-align: center;
     }
