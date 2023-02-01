@@ -12,6 +12,27 @@
 </head>
 
 <body>
+    <header>
+        <div class="title-site">
+            <a href="{{ path('app_home') }}">
+                Bedrinedev
+            </a>
+        </div>
+        <nav class="menu-nav" align="right" valign="middle">
+            <ul>
+                <li class="btn-header">
+                    <a href="{{ path('app_home') }}#">À propos</a>
+                </li>									
+                <li class="btn-header">
+                    <a href="{{ path('app_home') }}#info">Service</a>
+                </li>	
+                <li class="btn-header">
+                    <a href="{{ path('app_home') }}">Contact</a>
+                </li>
+            </ul>
+        </nav>			
+	</header>
+
     {% block body %}{% endblock %}
 
     {% block javascripts %}

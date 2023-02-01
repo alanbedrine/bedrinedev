@@ -1,1 +1,245 @@
 @import "~bootstrap/scss/bootstrap";
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+$color-1: #3498DB;
+$color-2: #2ED7F2;
+$color-3: #2CE8CF;
+$color-4: #2E70F2;
+$color-5: #2C3AE8;
+
+/* GENERAL */
+
+a, p, h1, h2, h3, h4, h5, h6 {
+    font-family: 'Quicksand', Arial, sans-serif;
+    color: white;
+}
+
+body {
+    background-image: url('../images/background.jpg');
+    background-repeat : no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0px;
+}
+
+.error {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+button {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 0px;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+    display: grid;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 100px;
+    grid-template-columns: 1fr 1fr;
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+        row-gap: 30px;
+        .title-site {
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .menu-nav {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.title-site {
+    a {
+        font-weight: bold;
+        font-size: 22px;
+    }
+}
+
+.menu-nav {
+    ul {
+        width: fit-content;
+        margin-left: auto;
+        li {
+            display: inline-block;
+            width: fit-content;
+            margin-left: 20px;
+            margin-right: 20px;
+            a {
+                font-weight: bold;
+                &:hover {
+                    color: $color-1;
+                    transition: 2s;
+                }
+            }
+        }
+    }
+}
+
+/* HOME */
+
+.btn {
+    display: block;
+    width: fit-content;
+    background-color: $color-1;
+    color: white;
+    border-radius: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 90px;
+    margin-bottom: 130px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+        transition: 3s;
+        background-color: $color-5;
+        color: white;
+    }
+}
+
+/* LOGIN */
+
+#login {
+    width: 50%;
+    min-width: 390px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    form {
+        background-color: $color-1;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    form label {
+        display: block;
+        font-size: 20px;
+        width: fit-content;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        margin-top: 25px;
+    }
+    form input, form select {
+        display: block;
+        border: none;
+        border-radius: 100px;
+        width: 70%;
+        min-width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: $color-1;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+    form div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+.btn-login {
+    display: block;
+    width: fit-content;
+    border: none;
+    background-color: white;
+    color: $color-1;
+    border-radius: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+        transition: 3s;
+        background-color: grey;
+        color: $color-1;
+    }
+}
+
+.error-login {
+    ul {
+        width: fit-content;
+        padding: 0px;
+        list-style: none;
+        margin-left: auto;
+        margin-right: auto;
+        li {
+            color: #C0392B;
+        }
+    }
+}
+
+/* NEWS */
+
+#news-form {
+    width: 50%;
+    min-width: 390px;
+    margin-top: 120px;
+    margin-bottom: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    form {
+        background-color: $color-1;
+        border-radius: 20px;
+        padding: 20px;
+    }
+    form label {
+        display: block;
+        font-size: 20px;
+        width: fit-content;
+        color: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+    }
+    form input, form select {
+        display: block;
+        border: none;
+        border-radius: 100px;
+        width: 70%;
+        min-width: 320px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        color: $color-1;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    form div {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* FOOTER */
+
+footer {
+    margin-top: 30px;
+}
