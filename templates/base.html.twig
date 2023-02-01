@@ -35,6 +35,12 @@
 
     {% block body %}{% endblock %}
 
+    <footer>
+        <p>
+            Copyright © Bedrinedev {{ "now"|date("Y") }}
+        </p>
+	</footer>
+
     {% block javascripts %}
         {{ encore_entry_script_tags('app') }}
     {% endblock %}

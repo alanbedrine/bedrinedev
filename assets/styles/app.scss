@@ -115,6 +115,48 @@ header {
     }
 }
 
+.home {
+    width: fit-content;
+    margin-top: 210px;
+    margin-left: auto;
+    margin-right: auto;
+    h1, h2 {
+        text-align: center;
+    }
+    h1 {
+        font-weight: bold;
+    }
+}
+
+.btn-grid {
+    display: grid;
+    width: fit-content;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+}
+
+.btn-home {
+    display: block;
+    width: fit-content;
+    color: white;
+    border: 2px solid white;
+    border-radius: 100px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+        transition: 3s;
+        background-color: white;
+        color: black;
+    }
+}
+
 /* LOGIN */
 
 #login {
@@ -242,4 +284,7 @@ header {
 
 footer {
     margin-top: 30px;
+    p {
+        text-align: center;
+    }
 }
