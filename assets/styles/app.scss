@@ -427,46 +427,87 @@ header {
     }
 }
 
-/* NEWS */
+/* ADMIN */
 
-#news-form {
+.table-contact {
+    background: $color-1;
     width: 50%;
-    min-width: 390px;
-    margin: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    tr {
+        border-color: lighten(#34495E, 10%);
+    }
+    th, td {
+        margin: .5em 1em;
+        form {
+            width: fit-content;
+            display: inline-block;
+        }
+        a, button {
+            display: inline-block;
+        }
+        button {
+            border: none;
+            background-color: transparent;
+            padding: 0px;
+        }
+        @media (min-width: 450px) {
+            padding: 1em !important;
+        }
+    }
+    @media (max-width: 850px) {
+        width: 420px;
+    }
+}
+
+.btn-action {
+    display: inline-block;
+    background: transparent;
+    width: fit-content;
+    height: fit-content;
+    border: none;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 0px;
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+#contact-detail {
+    background-color: $color-1;
+    width: 40%;
+    min-width: 400px;
+    margin-top: 120px;
     margin-bottom: 150px;
     margin-left: auto;
     margin-right: auto;
-    form {
-        background-color: $color-1;
-        border-radius: 20px;
-        padding: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-radius: 25px;
+    p {
+        font-weight: bold;
     }
-    form label {
-        display: block;
-        font-size: 20px;
-        width: fit-content;
-        color: white;
+}
+
+.contact-option-detail {
+    width: fit-content;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    a, form button {
+        width: 100%;
+        margin-top: 7px;
+        margin-bottom: 7px;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 5px;
-    }
-    form input, form select {
-        display: block;
-        border: none;
-        border-radius: 100px;
-        width: 70%;
-        min-width: 320px;
-        padding-left: 15px;
-        padding-right: 15px;
-        padding: 5px;
-        padding-bottom: 5px;
-        color: $color-1;
-        margin-left: auto;
-        margin-right: auto;
-    }
-    form div {
-        margin: 20px;
-        margin-bottom: 20px;
+        text-decoration: solid;
     }
 }
 

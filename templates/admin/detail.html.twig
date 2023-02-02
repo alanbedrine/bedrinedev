@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ contact.name }} {{ contact.lastName }} | Bedrinedev{% endblock %}
+
+{% block body %}
+<h1 class="text-white text-center">{{ contact.name }} {{ contact.lastName }}</h1>
+<div class="contact-option-detail">
+    <form action="{{ path('app_admin_deleted', {id: contact.id}) }}" method="post">
+        <input type="hidden" name="token" value="{{ csrf_token('deleted') }}"/>
+        <button type="submit" class="table-detail">Supprimer</button>
+    </form>
+</div>
+<section id="contact-detail">
+    <div class="contact-information">
+        <p class="text-center text-white">Prénom : {{ contact.name }}</p>
+        <p class="text-center text-white">Nom : {{ contact.lastName }}</p>
+        <p class="text-center text-white">Email : <a href="emailto:{{ contact.email }}">{{ contact.email }}</a></p>
+        <p class="text-center text-white">Adresse IP : {{ contact.ipAdress }}</p>
+        <p class="text-center text-white">Message : {{ contact.message }}</p>
+    </div>
+</section>
+{% endblock %}
