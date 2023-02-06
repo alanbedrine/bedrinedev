@@ -32,13 +32,12 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Projet Administration');
+            ->setTitle('Projet Administration')
+            ->setFaviconPath('build/images/favicon.png');
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::section('Blog');
-
         yield MenuItem::linkToDashboard('Dashboard', 'fa fa-home');
 
         yield MenuItem::section('Utilisateur');
