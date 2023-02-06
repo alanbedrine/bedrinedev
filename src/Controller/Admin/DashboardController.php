@@ -32,7 +32,7 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Projet Administration')
+            ->setTitle('Tableau d\'Admin')
             ->setFaviconPath('build/images/favicon.png');
     }
 
