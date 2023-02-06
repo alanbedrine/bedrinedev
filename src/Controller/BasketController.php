@@ -11,6 +11,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RequestStack;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Request;
 
 #[Route('/boutique')]
 class BasketController extends AbstractController
@@ -95,6 +96,27 @@ class BasketController extends AbstractController
 
         $repo->remove($basket, true);
 
+        return $this->redirectToRoute('app_basket');
+    }
+
+    #[Route('/paiement', name: 'app_basket_payment')]
+    public function payment(): Response
+    {
+        return $this->render('shop/payment.html.twig', [
+            'stripe_key' => 'pk_test_SRDopvjTn5g1iZUbeHtrx8D8',
+        ]);
+    }
+
+    #[Route('/paiement/process', name: 'app_stripe_process', methods: ['POST'])]
+    public function createProcess(Request $request)
+    {
+        \Stripe\Stripe::setApiKey('sk_test_6NMOc9sntua1bi9sIV7goNyR00RuVaTwVl');
+        \Stripe\Charge::create([
+            "amount" => 1500,
+            "currency" => "eur",
+            "source" => $request->request->get('stripeToken'),
+            "description" => "Paiement Bedrinedev"
+        ]);
         return $this->redirectToRoute('app_basket');
     }
 }

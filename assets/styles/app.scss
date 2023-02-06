@@ -250,6 +250,11 @@ header {
         margin-top: auto;
         margin-bottom: auto;
     }
+    div {
+        background-color: $color-1;
+        border-radius: 25px;
+        padding: 20px;
+    }
 }
 
 /* CONTACT */
@@ -633,8 +638,11 @@ header {
 /* FOOTER */
 
 footer {
+    background-color: $color-1;
+    width: 100%;
     margin-top: 100px;
-    margin-bottom: 25px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     p {
         text-align: center;
     }

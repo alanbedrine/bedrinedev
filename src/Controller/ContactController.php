@@ -36,7 +36,7 @@ class ContactController extends AbstractController
             $repository->save($contact, true);
 
             $email = (new Email())
-                ->from('<no-reply@bedrinedev.fr> Bedrinedev')
+                ->from(Address::create('Bedrinedev <no-reply@bedrinedev.fr>'))
                 ->to('alan.bedrine@gmail.com')
                 ->replyTo($email)
                 ->priority(Email::PRIORITY_HIGH)
