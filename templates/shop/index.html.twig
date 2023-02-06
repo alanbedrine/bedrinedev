@@ -4,7 +4,7 @@
 
 {% block body %}
 <section class="category" id="category">
-    <h1 class="text-white text-center">Catégories</h1>
+    <h1 class="text-global text-white text-center">Catégories</h1>
     <div class="grid-category">
         {% for category in categorys %}
             <a class="category-detail" href="{{ path('app_category_detail', {slug: category.slug}) }}">

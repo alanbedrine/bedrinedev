@@ -4,8 +4,8 @@
 
 {% block body %}
 <section class="product-info" id="category-info">
-    <h1 class="text-center text-uppercase">{{ product.name }}</h1>
-    <h2 class="h4 text-center text-capitalizise">{{ product.maker }}</h2>
+    <h1 class="text-global text-center text-uppercase">{{ product.name }}</h1>
+    <h2 class="text-global h4 text-center text-capitalizise">{{ product.maker }}</h2>
     <div class="grid-product-info">
         <div class="img-product">
             <img src="{{ asset('build/images/shop/product/' ~ product.img  ~'') }}" alt="{{ product.name }}" width="570" heigh="570"></img>

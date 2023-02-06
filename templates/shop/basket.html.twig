@@ -4,7 +4,7 @@
 
 {% block body %}
 <section class="basket" id="basket">
-    <h1 class="text-center text-uppercase">Panier</h1>
+    <h1 class="text-global text-center text-uppercase">Panier</h1>
     <table class="table-product">
         {% for product in products %}
             <tr>
@@ -15,10 +15,6 @@
                         <img src="{{ asset('build/images/shop/deleted.png') }}" alt="Supprimer" width="22" heigh="22"></img>
                     </a>
                 </td>
-            </tr>
-        {% else %}
-            <tr>
-                <td class="text-center">Aucun relevé n'à été trouvée.</td>
             </tr>
         {% endfor %}
     </table>

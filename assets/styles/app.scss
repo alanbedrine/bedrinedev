@@ -41,6 +41,15 @@ a {
     text-decoration: none;
 }
 
+.text-global {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $color-1;
+    padding: 5px;
+    border-radius: 5px;
+}
+
 /* HEADER */
 
 header {
@@ -170,10 +179,11 @@ header {
 }
 
 .btn-home {
+    background-color: white;
     display: block;
     width: fit-content;
-    color: white;
-    border: 2px solid white;
+    color: $color-1;
+    border: 2px solid $color-1;
     border-radius: 100px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -183,8 +193,8 @@ header {
     margin-right: auto;
     &:hover {
         transition: 3s;
-        background-color: white;
-        color: $color-1;
+        background-color: $color-1;
+        color: white;
     }
 }
 
@@ -254,6 +264,14 @@ header {
         background-color: $color-1;
         border-radius: 25px;
         padding: 20px;
+    }
+    @media (max-width: 1400px) {
+        width: 80%;
+    }
+    @media (max-width: 1200px) {
+        width: 90%;
+        row-gap: 60px;
+        grid-template-columns: 1fr;
     }
 }
 
