@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 use App\Entity\Category;
+use App\Entity\Product;
 use App\Repository\CategoryRepository;
+use App\Repository\ProductRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -17,7 +19,7 @@ class CategoryController extends AbstractController
         $categorys = $repository->findAll();
 
         return $this->render(
-            'category/index.html.twig',
+            'shop/index.html.twig',
             [
                 'categorys' => $categorys
             ]
@@ -28,7 +30,8 @@ class CategoryController extends AbstractController
     public function detail(
         string $slug,
         Category $category = null,
-        CategoryRepository $repo
+        CategoryRepository $repo,
+        ProductRepository $repoProduct
     ): Response {
         $category = $repo->findOneBy(['slug' => $slug]);
         if (!$category) {
@@ -37,12 +40,13 @@ class CategoryController extends AbstractController
 
         $categoryId = $category->getId();
 
-        $products = $repoProduct->find(['category' => $categoryId]);
+        $products = $repoProduct->findBy(['category' => $categoryId]);
 
         return $this->render(
-            'category/detail.html.twig',
+            'shop/category.html.twig',
             [
-                'category' => $category
+                'category' => $category,
+                'products' => $products
             ]
         );
     }

@@ -451,6 +451,7 @@ header {
     padding: 20px;
     border-radius: 25px;
     img {
+        display: block;
         margin-left: auto;
         margin-right: auto;
         border-radius: 25px;
@@ -481,10 +482,14 @@ header {
 }
 
 .product-detail {
+    display: block;
+    width: 300px;
+    height: fit-content;
     background-color: white;
     padding: 20px;
     border-radius: 25px;
     img {
+        display: block;
         margin-left: auto;
         margin-right: auto;
         border-radius: 25px;
@@ -492,6 +497,88 @@ header {
     h2 {
         color: $color-1;
         margin-top: 20px;
+    }
+}
+
+.grid-product-info {
+    width: fit-content;
+    display: grid;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 250px;
+    column-gap: 60px;
+    div {
+        background-color: $color-1;
+        border-radius: 25px;
+    }
+    img {
+        border-radius: 25px;
+    }
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+        row-gap: 50px;
+    }
+}
+
+.img-product {
+    padding: 20px;
+}
+
+.add-basket-product {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    a {
+        margin-top: 30px;
+    }
+    h3 {
+        margin-top: 25px;
+        color: #76D7C4;
+    }
+}
+
+.presentation-product {
+    background-color: $color-1;
+    width: 60%;
+    min-width: 450px;
+    padding: 20px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    h3 {
+        margin-top: 20px;
+    }
+}
+
+.add-basket {
+    background-color: white;
+    display: block;
+    width: fit-content;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: $color-1;
+    border: 2px $color-1 solid;
+    border-radius: 100px;
+    img {
+        display: inline-block;
+        margin-bottom: 2px;
+    }
+    &:hover {
+        transition: 2s;
+        border: 2px white solid;
+        background-color: $color-1;
+        color: white;
+        img {
+            background-image: url('../images/shop/add-basket-hover.png');
+        }
     }
 }
 
@@ -552,6 +639,7 @@ footer {
         text-align: center;
     }
     a {
+        display: block;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;

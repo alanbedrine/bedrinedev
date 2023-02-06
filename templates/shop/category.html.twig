@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ category.name }} | Bedrinedev{% endblock %}
+
+{% block body %}
+<section class="product-list" id="category-list">
+    <h1 class="text-white text-center text-capitalize">{{ category.name }}</h1>
+    <div class="grid-product">
+        {% for product in products %}
+            <div class="product-detail">
+                <a href="{{ path('app_product_detail', {slug: product.slug}) }}">
+                    <img src="{{ asset('build/images/shop/product/' ~ product.img  ~'') }}" alt="{{ product.name }}" width="200" heigh="200"></img>
+                    <h2 class="h6 text-center text-capitalize">{{ product.name }}</h2>
+                </a>
+                <a class="add-basket" href="{{ path('app_product_detail', {slug: product.slug}) }}">
+                    Ajouter au panier 
+                    <img src="{{ asset('build/images/shop/add-basket.png') }}" alt="Ajouter au Panier" width="22" heigh="22"></img>
+                </a>
+            </div>
+        {% endfor %}
+    </div>
+</section>
+{% endblock %}
