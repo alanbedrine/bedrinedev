@@ -26,10 +26,10 @@
                 <li class="btn-header">
                     <a href="{{ path('app_home') }}#entreprise">À propos</a>
                 </li>	
+                <li class="btn-header">
+                    <a href="{{ path('app_category') }}">Boutique</a>
+                </li>
                 {% if app.user %}
-                    <li class="btn-header">
-                        <a href="{{ path('app_contact') }}">Contact</a>
-                    </li>
                     <li class="btn-header">
                         <a href="{{ path('admin') }}">Admin</a>
                     </li>
@@ -38,7 +38,7 @@
                     </li>
                 {% else %}
                     <li class="btn-header-right">
-                        <a href="{{ path('app_contact') }}">Contact</a>
+                        <a href="{{ path('app_login') }}">Connexion</a>
                     </li>
                 {% endif %}
             </ul>
@@ -51,6 +51,7 @@
         <p>
             Copyright © Bedrinedev {{ "now"|date("Y") }}
         </p>
+        <a href="{{ path('app_contact') }}">Contact</a>
 	</footer>
 
     {% block javascripts %}

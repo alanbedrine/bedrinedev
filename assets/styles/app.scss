@@ -427,43 +427,75 @@ header {
     }
 }
 
-/* ADMIN */
+/* CATEGORY */
 
-.table-contact {
-    background: $color-1;
-    width: 50%;
+.grid-category {
+    width: fit-content;
+    display: grid;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    color: white;
-    border-radius: 20px;
-    overflow: hidden;
-    tr {
-        border-color: lighten(#34495E, 10%);
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
     }
-    th, td {
-        margin: .5em 1em;
-        form {
-            width: fit-content;
-            display: inline-block;
-        }
-        a, button {
-            display: inline-block;
-        }
-        button {
-            border: none;
-            background-color: transparent;
-            padding: 0px;
-        }
-        @media (min-width: 450px) {
-            padding: 1em !important;
-        }
-    }
-    @media (max-width: 850px) {
-        width: 420px;
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
     }
 }
+
+.category-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+    }
+    h2 {
+        color: $color-1;
+        margin-top: 20px;
+    }
+}
+
+/* PRODUCT */
+
+.grid-product {
+    width: fit-content;
+    display: grid;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 50px;
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 500px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.product-detail {
+    background-color: white;
+    padding: 20px;
+    border-radius: 25px;
+    img {
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 25px;
+    }
+    h2 {
+        color: $color-1;
+        margin-top: 20px;
+    }
+}
+
+/* CONTACT */
 
 .btn-action {
     display: inline-block;
@@ -518,5 +550,10 @@ footer {
     margin-bottom: 25px;
     p {
         text-align: center;
+    }
+    a {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
