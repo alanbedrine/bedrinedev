@@ -186,6 +186,7 @@ header {
     padding-bottom: 10px;
     padding-left: 40px;
     padding-right: 40px;
+    margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
     &:hover {
@@ -248,14 +249,15 @@ header {
     h2 {
         font-weight: bold;
     }
-    h3 {
-        margin-top: 25px;
+    p {
+        margin-top: 15px;
         text-align: justify;
     }
     img {
         width: 100%;
         margin-top: auto;
         margin-bottom: auto;
+        border-radius: 20px;
     }
     div {
         background-color: $color-1;
@@ -659,6 +661,7 @@ footer {
     padding-top: 25px;
     padding-bottom: 25px;
     p {
+        font-weight: bold;
         text-align: center;
     }
     a {
@@ -666,5 +669,15 @@ footer {
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
+    }
+    div {
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        a {
+            display: inline-block;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
     }
 }
