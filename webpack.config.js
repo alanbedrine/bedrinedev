@@ -15,6 +15,10 @@ Encore
         from: './assets/images',
         to: 'images/[path][name].[hash:8].[ext]',
     })
+    .copyFiles({
+        from: './assets/documents',
+        to: 'documents/[path][name].[hash:8].[ext]',
+    })
     // only needed for CDN's or subdirectory deploy
     //.setManifestKeyPrefix('build/')
 

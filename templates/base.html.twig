@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>{% block title %}Développeur web et Informaticien | Bedrinedev{% endblock %}</title>
+    <title>{% block title %}Développeur web et Informaticien{% endblock %} | Bedrinedev</title>
     <meta name="description" content="Bedrinedev, agence web et de maintenance informatique basée à Lyon, vous propose ses services de réalisation de site vitrine, ecommerce ou de maintenance informatique.">
 	<link rel="icon" href="{{ asset('build/images/favicon.png') }}">
     {% block stylesheets %}
@@ -42,10 +42,9 @@
         </p>
         <div>
             <a href="{{ path('app_contact') }}">Contact</a>
-            <a href="{{ path('app_contact') }}">Mention légal</a>
-            <a href="{{ path('app_contact') }}">Politique de confidentialité</a>
-            <a href="{{ path('app_contact') }}">CGV</a>
-            <a href="{{ path('app_contact') }}">CGU</a>
+            <a href="{{ path('app_mention_legal') }}">Mention légal</a>
+            <a href="{{ path('app_cgv') }}">CGV</a>
+            <a href="{{ path('app_franchise') }}">Franchise</a>
         </div>
 	</footer>
 

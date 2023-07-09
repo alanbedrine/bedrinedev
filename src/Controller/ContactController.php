@@ -37,7 +37,7 @@ class ContactController extends AbstractController
 
             $email = (new Email())
                 ->from(Address::create('Bedrinedev <no-reply@bedrinedev.fr>'))
-                ->to('alan.bedrine@gmail.com')
+                ->to('contact@bedrinedev.fr')
                 ->replyTo($email)
                 ->priority(Email::PRIORITY_HIGH)
                 ->subject('Contact - Bedrinedev')
